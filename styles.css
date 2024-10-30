@@ -1,0 +1,89 @@
+/* Ensure the section fills the viewport */
+#hero {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Text color to contrast with the video */
+    text-align: left;
+}
+
+/* Style the video to cover the background */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes sure the video covers the entire area */
+    z-index: -1; /* Puts the video behind the content */
+}
+
+/* Add some styling for the overlay content */
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* About section background */
+.about-section {
+    background-image: url('images/luca-bravo-9l_326FISzk-unsplash.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Text color to contrast with background */
+    position: relative;
+    padding: 50px 0;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.about-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+#img1 {
+    margin-left: 100px; /* Adjust the pixel value as needed */
+}
+#img2 {
+    margin-right: 50px;
+}
+
+/* Contact section background */
+.contact-section {
+    background-image: url('images/loubna-benamer-AJSFo2ZIURQ-unsplash.jpg'); /* Replace with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Text color to make it readable over the background */
+    padding: 50px 0;
+    position: relative;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.contact-section .container {
+    position: relative;
+    z-index: 2;
+}
+
